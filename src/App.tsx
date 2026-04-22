@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export default function App() {
   const finalStatement = "Building the operating systems for Africa’s future institutions. Miles Platforms Group bridges the gap between academic theory and mission-critical execution. Our goal is to provide sovereign, audit-ready infrastructure for the health, education, and government sectors through the 2030 roadmap.";
