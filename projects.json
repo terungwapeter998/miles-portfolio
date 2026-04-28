@@ -1,0 +1,39 @@
+[
+    {
+        "name": "CivicReport Nigeria",
+        "description": "Deterministic ledger engine for institutional accountability and transparency.",
+        "status": "Active",
+        "tech": [
+            "Firestore",
+            "Hexagonal Architecture"
+        ]
+    },
+    {
+        "name": "Mesokurtic",
+        "description": "Supply chain intelligence and logistics dashboard deployed on Vercel Edge.",
+        "status": "Production",
+        "tech": [
+            "React",
+            "Vite",
+            "Edge Functions"
+        ]
+    },
+    {
+        "name": "Miles Schooldesk",
+        "description": "High-integrity school management system applying ports and adapters logic.",
+        "status": "Development",
+        "tech": [
+            "Node.js",
+            "Deterministic Ledgers"
+        ]
+    },
+    {
+        "name": "Miles EduReach",
+        "description": "Digital infrastructure for learning materials in underserved communities.",
+        "status": "Research",
+        "tech": [
+            "Offline-First",
+            "Digital Assets"
+        ]
+    }
+]
