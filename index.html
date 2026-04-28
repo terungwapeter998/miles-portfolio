@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terungwa Peter</title>
-
+    <title>Terungwa Peter | Miles Platform Group</title>
     <style>
         body {
             margin: 0;
@@ -17,6 +16,7 @@
 
         header {
             padding: 25px 20px;
+            border-bottom: 1px solid #eee;
         }
 
         .topbar {
@@ -61,12 +61,14 @@
             object-fit: contain;
             border-radius: 8px;
             border: 1px solid rgba(0, 0, 0, 0.2);
-
         }
 
         h2 {
             margin-top: 25px;
             font-size: 20px;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
         .section {
@@ -77,10 +79,39 @@
             padding-left: 20px;
         }
 
+        /* Manifesto Specific Styling */
+        .manifesto-container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #000;
+            margin-top: 20px;
+        }
+
+        .principle-item {
+            margin-bottom: 15px;
+            list-style: none;
+        }
+
+        .principle-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        .version-tag {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
             margin-top: 40px;
+            border-top: 1px solid #eee;
         }
 
         @media (max-width: 900px) {
@@ -101,22 +132,27 @@
                 <p>Deterministic systems. High-integrity engineering. Architecture-first execution. Victory is from GOD.
                 </p>
             </div>
-
             <img src="src/assets/logo.png" alt="Company Logo" class="logo" />
         </div>
     </header>
 
     <div class="container">
-
         <div class="profile">
             <img src="src/assets/me.jpg" alt="Terungwa Peter" class="me" />
-
             <h2>Professional Identity</h2>
             <p><strong>Terungwa Peter</strong></p>
-            <p>
-                Software Developer, Founder & CEO of Miles Platform Group.<br />
-                Based in Lagos, Nigeria.<br />Victory is from GOD
-            </p>
+            <p>Software Developer, Founder & CEO of Miles Platform Group.<br />Based in Lagos, Nigeria.<br />Victory is
+                from GOD</p>
+        </div>
+
+        <div class="section">
+            <h2>Engineering Manifesto</h2>
+            <div class="manifesto-container">
+                <p class="version-tag">System Version: <span data-field="version">0.0.0</span></p>
+                <div class="principles-list">
+                    <p>Loading deterministic principles...</p>
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -124,18 +160,6 @@
             <ul>
                 <li>Diploma in Electrical and Electronics Engineering</li>
                 <li>B.Sc. Computer Science — Ahmadu Bello University (ABU), Zaria</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Engineering Philosophy</h2>
-            <ul>
-                <li>Architecture/Infrastructure Singularity</li>
-                <li>Hexagonal Architecture</li>
-                <li>Deterministic Ledgers</li>
-                <li>High-Integrity Engineering</li>
-                <li>Logical Determinism</li>
-                <li>System Invariants</li>
             </ul>
         </div>
 
@@ -150,18 +174,38 @@
 
         <div class="section">
             <h2>Contact</h2>
-            <p>
-                milesplatformsgroup@gmail.com<br />
-                Lagos, Nigeria
-            </p>
+            <p>milesplatformsgroup@gmail.com<br />Lagos, Nigeria</p>
         </div>
-
     </div>
 
-    <footer>
-        © 2026 Miles Platform Group. All rights reserved.
-    </footer>
+    <footer>© 2026 Miles Platform Group. All rights reserved.</footer>
 
+    <script>
+        async function syncManifesto() {
+            try {
+                const response = await fetch('./src/data/principles.json');
+                if (!response.ok) throw new Error('Data Source Unreachable');
+                const data = await response.json();
+
+                const listContainer = document.querySelector('.principles-list');
+
+                // Deterministic rendering: Clear and build from source of truth
+                listContainer.innerHTML = data.principles.map(p => `
+                    <div class="principle-item">
+                        <div class="principle-title">${p.title}</div>
+                        <p class="principle-desc">${p.description}</p>
+                    </div>
+                `).join('');
+
+                document.querySelector('[data-field="version"]').innerText = data.version;
+            } catch (error) {
+                console.error('Integrity Error:', error);
+                document.querySelector('.principles-list').innerHTML = '<p style="color:red">Error: System Invariants Violated. Could not load principles.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', syncManifesto);
+    </script>
 </body>
 
 </html>

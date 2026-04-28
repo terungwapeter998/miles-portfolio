@@ -1,0 +1,22 @@
+{
+    "manifestoTitle": "The Stage 6 Engineering Manifesto",
+    "version": "1.0.4",
+    "lastUpdated": "2026-04-28",
+    "principles": [
+        {
+            "id": "p-001",
+            "title": "Invariant-First",
+            "description": "System logic must prioritize mathematical certainty and state invariants over simple input validation."
+        },
+        {
+            "id": "p-002",
+            "title": "Zero-Trust Architecture",
+            "description": "Treat every boundary as a potential failure point; assume all external inputs and internal states are hostile until verified."
+        },
+        {
+            "id": "p-003",
+            "title": "Deterministic Execution",
+            "description": "Side effects must be isolated. Given the same input and state, the system must produce the identical output every time."
+        }
+    ]
+}
