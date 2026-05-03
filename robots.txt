@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://miles-terungwa.vercel.app/sitemap.xml

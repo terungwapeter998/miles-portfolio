@@ -1,0 +1,145 @@
+:root {
+    --bg-dark: #050505;
+    --card-bg: #0d0d0d;
+    --accent: #ffffff;
+    --muted: #888888;
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    /* Technical Grid Background */
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: var(--accent);
+    line-height: 1.6;
+}
+
+/* Hero & Header Styling */
+header {
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(circle at top right, #111, transparent);
+}
+
+.topbar {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    background: linear-gradient(to bottom, #fff, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.me {
+    width: 220px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.me:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Section Headings */
+h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--muted);
+    border-left: 3px solid #fff;
+    padding-left: 15px;
+    margin-top: 50px;
+}
+
+/* The Active Registry Grid */
+#project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow effect on hover */
+.project-card:hover {
+    border-color: #fff;
+    background: #111;
+}
+
+.project-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.status-tag {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 10px;
+    font-weight: 900;
+    background: #fff;
+    color: #000;
+    padding: 5px 12px;
+    text-transform: uppercase;
+}
+
+/* Social & Footer */
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 15px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    color: #444;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}

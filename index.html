@@ -2,123 +2,216 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="S9w5PXEJyJ4hEB_rxZLwQvtu-Gd9CnVyFsU0ZLPcw4I" />
-    <title>Miles Platform Group</title>
+
+    <title>Terungwa Peter | Founder & CEO, Miles Platform Group</title>
+    <meta name="description"
+        content="Official profile of Terungwa Peter, Software Developer and CEO of Miles Platform Group. Based in Lagos, specializing in deterministic systems.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Terungwa Peter",
+      "url": "https://miles-terungwa.vercel.app/",
+      "jobTitle": "CEO & Founder",
+      "worksFor": { "@type": "Organization", "name": "Miles Platform Group" },
+      "sameAs": [
+        "https://www.linkedin.com/in/terungwa-peter-5497a4316",
+        "https://www.facebook.com/profile.php?id=61578908544410",
+        "https://www.instagram.com/terungwa_peter9"
+      ]
+    }
+    </script>
 
     <style>
+        :root {
+            --bg: #050505;
+            --accent: #ffffff;
+            --muted: #666666;
+            --border: rgba(255, 255, 255, 0.08);
+            --grid: rgba(255, 255, 255, 0.02);
+            --glow: radial-gradient(circle at 50% -20%, #111, transparent);
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #0b0b0b;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
+            background-image:
+                var(--glow),
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            color: var(--accent);
             line-height: 1.6;
-        }
-
-        header {
-            padding: 25px 20px;
-        }
-
-        .topbar {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 34px;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            background: rgba(255, 255, 255, 0.6);
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 80px 24px;
         }
 
-        .profile {
+        /* Header / Logo Styling */
+        header {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            opacity: 0.8;
+            filter: invert(1);
+            /* Adjust if your logo is dark */
+        }
+
+        /* Hero Profile Styling */
+        .profile-hero {
+            padding: 40px 0 80px 0;
+            border-bottom: 1px solid var(--border);
         }
 
         .me {
-            width: 280px;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            filter: grayscale(100%);
+            transition: 0.5s ease;
+            margin-bottom: 24px;
         }
 
+        .me:hover {
+            filter: grayscale(0%);
+            border-color: var(--accent);
+        }
+
+        .hero-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-title {
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin: 8px 0 24px 0;
+        }
+
+        /* Minimalist List Styling (No Cards) */
         h2 {
-            margin-top: 25px;
-            font-size: 20px;
-            border-bottom: 2px solid #0b0b0b;
-            display: inline-block;
-            padding-bottom: 5px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            margin-top: 80px;
+            margin-bottom: 30px;
         }
 
-        .section {
-            margin-top: 35px;
+        .registry-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            transition: 0.2s;
         }
 
+        .registry-item:hover {
+            padding-left: 10px;
+        }
+
+        .registry-item h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .registry-item p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 4px 0 0 0;
+        }
+
+        .status {
+            font-size: 0.65rem;
+            font-weight: 900;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Standard List Styling */
         ul {
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
         }
 
-        #project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+        ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: #ccc;
+        }
+
+        /* Social/Links */
+        .social {
             margin-top: 20px;
         }
 
-        .project-card {
-            padding: 15px;
-            border: 1px solid #ddd;
+        .social a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.9rem;
+            opacity: 0.5;
+            transition: 0.3s;
         }
 
-        .project-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-        }
-
-        .status-tag {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: #0b0b0b;
-            color: #fff;
-            padding: 2px 8px;
+        .social a:hover {
+            opacity: 1;
+            text-decoration: underline;
         }
 
         footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 40px;
-            border-top: 1px solid #eee;
+            text-align: left;
+            padding: 100px 0;
+            color: #222;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
-        @media (max-width: 900px) {
-            .topbar {
+        @media (max-width: 600px) {
+            .hero-name {
+                font-size: 2rem;
+            }
+
+            .registry-item {
                 flex-direction: column;
-                align-items: flex-start;
+            }
+
+            .status {
+                margin-top: 12px;
             }
         }
     </style>
@@ -126,129 +219,62 @@
 
 <body>
 
-    <header>
-        <div class="topbar">
+    <div class="container">
+        <header>
             <div>
                 <h1>Miles Platform Group</h1>
-                <p>Deterministic systems. High-integrity engineering. Architecture-first execution.</p>
             </div>
+            <img src="src/assets/logo.png" alt="Miles Logo" class="logo">
+        </header>
 
-            <img src="src/assets/logo.png" alt="Company Logo" class="logo" />
-        </div>
-    </header>
-
-    <div class="container">
-
-        <div class="profile">
-            <img src="src/assets/me.jpg" alt="Terungwa Peter" class="me" />
-
-            <h2>Professional Identity</h2>
-            <p><strong>Terungwa Peter</strong></p>
-            <p>
-                Software Developer, Founder & CEO of Miles Platform Group.<br />
-                Based in Lagos, Nigeria.<br />
-                <strong>Victory is from GOD alone</strong>
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>About Miles Platform Group</h2>
-            <p>
-                Miles Platform Group is an engineering-first organization focused on building
-                sector-scale institutional systems across Africa.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Education Background</h2>
-            <ul>
-                <li>Diploma in Electrical and Electronics Engineering</li>
-                <li>B.Sc. Computer Science — Ahmadu Bello University (ABU), Zaria</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Engineering Philosophy</h2>
-            <ul>
-                <li>Architecture/Infrastructure Singularity</li>
-                <li>Hexagonal Architecture</li>
-                <li>Deterministic Ledgers</li>
-                <li>High-Integrity Engineering</li>
-                <li>Logical Determinism</li>
-                <li>System Invariants</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Active Systems</h2>
-            <div id="project-grid">
-                <p>Loading system registry...</p>
+        <section class="profile-hero">
+            <img src="src/assets/me.jpg" alt="Terungwa Peter" class="me">
+            <h1 class="hero-name">Terungwa Peter</h1>
+            <p class="hero-title">Software Developer & CEO, Miles Platform Group</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/terungwa-peter-5497a4316" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com/profile.php?id=61578908544410" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/terungwa_peter9" target="_blank">Instagram</a>
             </div>
+        </section>
+
+        <h2>Academic Background</h2>
+        <ul>
+            <li><span>B.Sc. Computer Science</span> <span>ABU Zaria</span></li>
+            <li><span>Diploma in Electrical Engineering</span></li>
+        </ul>
+
+        <h2>Active Registry</h2>
+        <div id="project-grid">
+            <p style="color: var(--muted);">Syncing systems...</p>
         </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p>
-                milesplatformsgroup@gmail.com<br />
-                Lagos, Nigeria
-            </p>
-        </div>
-
+        <footer>
+            &copy; 2026 Terungwa Peter. Designed for Miles Platform Group.
+        </footer>
     </div>
 
-    <footer>
-        © 2026 Miles Platform Group. All rights reserved.
-    </footer>
-
     <script>
-        function escapeHTML(str) {
-            return String(str).replace(/[&<>"']/g, function (match) {
-                const escape = {
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                    '\"': '&quot;',
-                    "'": '&#039;'
-                };
-                return escape[match];
-            });
-        }
-
-        async function loadProjects() {
-            const container = document.getElementById('project-grid');
-
+        async function init() {
+            const grid = document.getElementById('project-grid');
             try {
-                const response = await fetch('/projects.json');
-                if (!response.ok) throw new Error("Registry offline");
-
-                const projects = await response.json();
-
-                if (!Array.isArray(projects)) {
-                    throw new Error("Invalid schema");
-                }
-
-                container.innerHTML = projects.map(project => `
-      <div class="project-card">
-        <h3>${escapeHTML(project.name)}</h3>
-        <p>${escapeHTML(project.description)}</p>
-        <span class="status-tag">${escapeHTML(project.status)}</span>
-      </div>
-    `).join('');
-
-            } catch (error) {
-                container.innerHTML = `
-      <div class="project-card">
-        <h3>System Offline</h3>
-        <p>Project registry unavailable.</p>
-        <span class="status-tag">ERROR</span>
-      </div>
-    `;
+                const res = await fetch('projects.json');
+                const data = await res.json();
+                grid.innerHTML = data.map(p => `
+                    <div class="registry-item">
+                        <div>
+                            <h3>${p.name}</h3>
+                            <p>${p.description}</p>
+                        </div>
+                        <span class="status">${p.status}</span>
+                    </div>
+                `).join('');
+            } catch (e) {
+                grid.innerHTML = '<p style="color:red;">Registry connection failed.</p>';
             }
         }
-
-        document.addEventListener('DOMContentLoaded', loadProjects);
+        init();
     </script>
-
 </body>
 
 </html>
